@@ -1,0 +1,31 @@
+﻿@model List<LeagueTable.Models.Table>
+
+@{
+    ViewBag.Title = "LeagueTable";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>LeagueTable</h2>
+
+<table class="table">
+    <tr>
+        <th>Rank</th>
+        <th>Club</th>
+        <th>Points</th>
+        <th>Form</th>
+        <th>Goal Difference</th>
+    </tr>
+    @foreach(var team in Model)
+    {
+    <tr>
+        <td>@team.Rank</td>
+        <td>@team.Team_Name</td>
+        <td>@team.Points</td>
+        <td>@team.Form</td>
+        <td>@team.GoalDifference</td>
+    </tr>
+    }
+</table>
+
+@Html.Partial
+
